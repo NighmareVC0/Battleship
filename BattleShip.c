@@ -215,14 +215,14 @@ int main()
    } while (!rep);
 }
 /*
-   Función:    genOcean
-   Argumentos: int ocean, matrix to be generated.
+   Function:    genOcean
+   Arguments: int ocean, matrix to be generated.
                int rows, matrix's quantity of rows.
                int columns, matrix's quantity of columns.
 
-   Objetivo:   to create the matrix 'ocean' which has  n-'rows' rows and
+   Objective:   to create the matrix 'ocean' which has  n-'rows' rows and
                n-'columns' columns.
-   Retorno:    None.
+   Return:    None.
 */
 void genOcean(int ocean[][COLUMNS], int rows, int columns)
 {
@@ -232,14 +232,14 @@ void genOcean(int ocean[][COLUMNS], int rows, int columns)
    return;
 }
 /*
-   Función:    copyOcean
-   Argumentos: int oldMat, matrix to be copied.
+   Function:    copyOcean
+   Arguments: int oldMat, matrix to be copied.
                int newMat, new matrix copy.
                int rows, matrix's quantity of rows.
                int columns, matrix's quantity of columns.
 
-   Objetivo:   to copy 'oldMat's' values in 'newMat's' ones.
-   Retorno:    None.
+   Objective:   to copy 'oldMat's' values in 'newMat's' ones.
+   Return:    None.
 */
 void copyOcean(int oldMat[][COLUMNS], int newMat[][COLUMNS], int rows, int columns)
 {
@@ -249,8 +249,8 @@ void copyOcean(int oldMat[][COLUMNS], int newMat[][COLUMNS], int rows, int colum
    return;
 }
 /*
-   Función:    showOceanXY
-   Argumentos: int ocean, matrix to be printed.
+   Function:    showOceanXY
+   Arguments: int ocean, matrix to be printed.
                int rows, matrix's quantity of rows.
                int columns, matrix's quantity of columns.
                int posX, horizontal plane's position.
@@ -258,11 +258,11 @@ void copyOcean(int oldMat[][COLUMNS], int newMat[][COLUMNS], int rows, int colum
                int actRow, current matrix's row position.
                int actCol, current matrix's columns position.
 
-   Objetivo:   to print the matrix 'ocean' which has  n-'rows' rows and
+   Objective:   to print the matrix 'ocean' which has  n-'rows' rows and
                n-'columns' columns, in posX and posY positions,
                depending on the value, the color will change.
 
-   Retorno:     None.
+   Return:     None.
 */
 void showOceanXY(int ocean[][COLUMNS], int rows, int columns, int posX, int posY, int actRow, int actCol)
 {
@@ -292,13 +292,13 @@ void showOceanXY(int ocean[][COLUMNS], int rows, int columns, int posX, int posY
    return;
 }
 /*
-   Función:    putShip
-   Argumentos: int ocean, matrix to be evaluated (putting ships).
+   Function:    putShip
+   Arguments: int ocean, matrix to be evaluated (putting ships).
                int rows, matrix's quantity of rows.
                int columns, matrix's quantity of columns.
 
-   Objetivo:   to put or remove ships in the matrix 'ocean'.
-   Retorno:    int 'SHP' if the position was 'OCEAN'.
+   Objective:   to put or remove ships in the matrix 'ocean'.
+   Return:    int 'SHP' if the position was 'OCEAN'.
                int 'OCEAN' if the position was 'SHP'.
 */
 int putShip(int ocean[][COLUMNS], int actRow, int actCol)
@@ -309,10 +309,10 @@ int putShip(int ocean[][COLUMNS], int actRow, int actCol)
       return OCEAN;
 }
 /*
-   Función:    machineShip
-   Argumentos: int eneOcean, enemy's matrix to be evaluated.
-   Objetivo:   to put randomly ships in the matrix 'eneOcean'.
-   Retorno:    None.
+   Function:    machineShip
+   Arguments: int eneOcean, enemy's matrix to be evaluated.
+   Objective:   to put randomly ships in the matrix 'eneOcean'.
+   Return:    None.
 */
 void machineShip(int eneOcean[][COLUMNS])
 {
@@ -326,13 +326,13 @@ void machineShip(int eneOcean[][COLUMNS])
    return;
 }
 /*
-   Función:    checkPlay
-   Argumentos: int ocean, matrix to be evaluated.
+   Function:    checkPlay
+   Arguments: int ocean, matrix to be evaluated.
                int actRow, current matrix's row position.
                int actCol, current matrix's columns position.
 
-   Objetivo:   to check what happened with the "shot".
-   Retorno:    int HIT,  if hit machine's ships.
+   Objective:   to check what happened with the "shot".
+   Return:    int HIT,  if hit machine's ships.
                int XHIT, if hit player's ships.
                int MISS, if didn't hit anything.
 */
@@ -346,13 +346,13 @@ int checkPlay(int ocean[][COLUMNS], int actRow, int actCol)
       return MISS;
 }
 /*
-   Función:    checkOcean
-   Argumentos: int tempOcean, matrix to be evaluated.
+   Function:    checkOcean
+   Arguments: int tempOcean, matrix to be evaluated.
                int actRow, current matrix's row position.
                int actCol, current matrix's columns position.
 
-   Objetivo:   to check if the position selected is available to use.
-   Retorno:    int true or false
+   Objective:   to check if the position selected is available to use.
+   Return:    int true or false
 */
 int checkOcean(int tempOcean[][COLUMNS], int actRow, int actCol)
 {
@@ -362,8 +362,8 @@ int checkOcean(int tempOcean[][COLUMNS], int actRow, int actCol)
       return 0;
 }
 /*
-    Función:    copyOcean
-    Argumentos: int tempMat, player's matrix.
+    Function:    copyOcean
+    Arguments: int tempMat, player's matrix.
                 int eneOcean, machine's matrix.
                 int ocean, game's mother matrix.
                 int actRow, current player's matrix's row position.
@@ -371,8 +371,8 @@ int checkOcean(int tempOcean[][COLUMNS], int actRow, int actCol)
                 int eneRow, current machines's matrix's row position.
                 int eneCol, current machines's matrix's columns position.
 
-    Objetivo:   to fill with USED or MUSED 'tempOcean' and 'eneOcean' matrix, depending on the last player's game effect.
-    Retorno:    None.
+    Objective:   to fill with USED or MUSED 'tempOcean' and 'eneOcean' matrix, depending on the last player's game effect.
+    Return:    None.
  */
 void usedMoves(int tempOcean[][COLUMNS], int eneOcean[][COLUMNS], int ocean[][COLUMNS], int actRow, int actCol, int eneRow, int eneCol)
 {
@@ -399,13 +399,13 @@ void usedMoves(int tempOcean[][COLUMNS], int eneOcean[][COLUMNS], int ocean[][CO
    return;
 }
 /*
-   Función:    playerTurn
-   Argumentos: int ocean, matrix to be evaluated.
+   Function:    playerTurn
+   Arguments: int ocean, matrix to be evaluated.
                int actRow, current matrix's row position.
                int actCol, current matrix's columns position.
 
-   Objetivo:   to inform to the player what happened with it's move
-   Retorno:    None.
+   Objective:   to inform to the player what happened with it's move
+   Return:    None.
 */
 void playerTurn(int ocean[][COLUMNS], int actRow, int actCol)
 {
@@ -419,13 +419,13 @@ void playerTurn(int ocean[][COLUMNS], int actRow, int actCol)
    return;
 }
 /*
-   Función:     machineTurn
-   Argumentos:  int ocean, matrix to be evaluated.
+   Function:     machineTurn
+   Arguments:  int ocean, matrix to be evaluated.
                 int actRow, current matrix's row position.
                 int actCol, current matrix's columns position.
 
-   Objetivo:    to inform to the player what happened with machine's move
-   Retorno:     None.
+   Objective:    to inform to the player what happened with machine's move
+   Return:     None.
 */
 void machineTurn(int ocean[][COLUMNS], int eneRow, int eneCol)
 {
@@ -439,10 +439,10 @@ void machineTurn(int ocean[][COLUMNS], int eneRow, int eneCol)
    return;
 }
 /*
-   Función:    confirmShips
-   Argumentos: void
-   Objetivo:   Preguntarle la jugador si desea confirmar la ubicación de las naves colocadas.
-   Retorno:    true (int) quiere confirmar;
+   Function:    confirmShips
+   Arguments: void
+   Objective:   Preguntarle la jugador si desea confirmar la ubicación de las naves colocadas.
+   Return:    true (int) quiere confirmar;
                false (int) no quiere confirmar.
 */
 int confirmShips()
@@ -460,10 +460,10 @@ int confirmShips()
       return 0;
 }
 /*
-   Función:    instructions
-   Argumentos: None.
-   Objetivo:   Explain to the player how to play the game.
-   Retorno:    None.
+   Function:    instructions
+   Arguments: None.
+   Objective:   Explain to the player how to play the game.
+   Return:    None.
 */
 void instructions()
 {
@@ -478,22 +478,22 @@ void instructions()
    return;
 }
 /*
-   Función:    randRange
-   Argumentos: int minLimit, inferior limit.
+   Function:    randRange
+   Arguments: int minLimit, inferior limit.
                int maxLimit, superior limit.
 
-   Objetivo:   to get a random number.
-   Retorno:    int, a random number.
+   Objective:   to get a random number.
+   Return:    int, a random number.
 */
 int randRange(int minLimit, int maxLimit)
 {
    return rand() % (maxLimit - minLimit + 1) + minLimit;
 }
 /*
-   Función:    defaultColor
-   Argumentos: None.
-   Objetivo:   to set default colors.
-   Retorno:    None.
+   Function:    defaultColor
+   Arguments: None.
+   Objective:   to set default colors.
+   Return:    None.
 */
 void defaultColor()
 {
@@ -502,12 +502,12 @@ void defaultColor()
    return;
 }
 /*
-   Función:    setColor
-   Argumentos: int TC, text's color.
+   Function:    setColor
+   Arguments: int TC, text's color.
                int BC, background's color.
 
-   Objetivo:   to set text color 'TC' and background 'BC'.
-   Retorno:    None.
+   Objective:   to set text color 'TC' and background 'BC'.
+   Return:    None.
 */
 void setColor(int TC, int BC)
 {
@@ -516,13 +516,13 @@ void setColor(int TC, int BC)
    return;
 }
 /*
-   Función:    showTimeXY
-   Argumentos: int seg, seconds to be evaluated.
+   Function:    showTimeXY
+   Arguments: int seg, seconds to be evaluated.
                int posX, horizontal plane's position.
                int posY, vertical plane's position.
 
-   Objetivo:   to get and show the current time lapsed.
-   Retorno:    None.
+   Objective:   to get and show the current time lapsed.
+   Return:    None.
 */
 void showTimeXY(int seg, int posX, int posY)
 {
