@@ -1,5 +1,5 @@
 # Battleship Game
-### Universitary project
+### Universitary Project
 
 This is a Battleship game I made using C in VS Code.
 
